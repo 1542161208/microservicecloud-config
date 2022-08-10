@@ -1,5 +1,25 @@
-server: 
-	port: 8888
 spring: 
-	application: 
-		name: lixiang
+  application: 
+    name: microservicecloud-config-client
+---
+server: 
+  port: 8201 
+  
+spring:
+  profiles: dev
+
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka-dev.com:7001/eureka/   
+---
+server: 
+  port: 8202 
+  
+spring:
+  profiles: test
+  
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka-test.com:7001/eureka/
