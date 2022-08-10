@@ -1,0 +1,10 @@
+server: 
+  port: 8202 
+spring:
+  profiles: onlinewxtest
+  application: 
+    name: onlinewxtestname
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka-onlinewxtest.com:7001/eureka/
